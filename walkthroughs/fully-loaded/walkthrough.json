@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "repos": [],
+    "serviceInstances": [{
+      "metadata": { "name": "mysql" },
+      "spec": {
+        "clusterServiceClassExternalName": "cakephp-mysql-example",
+        "clusterServicePlanExternalName": "default"
+      }
+      }]
+  }
+}

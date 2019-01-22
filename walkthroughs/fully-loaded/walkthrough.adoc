@@ -1,0 +1,30 @@
+= Fully Loaded Walkthrough
+
+// This is a template meant to be used as a starting point for walkthrough development
+
+[time=5]
+== Adding a mysql instance using a walkthrough
+
+. Get log in from OpenShift Console
+. Log into OpenShift from a console
+. Run the following command to view the external service names of the catalog:
++
+----
+oc get clusterserviceclasses -o custom-columns="displayName:.spec.externalMetadata.displayName, externalName:.spec.externalName"
+----
+. Add the service you require to `walkthrough.json`, for example:
++
+----
+{
+  "dependencies": {
+    "repos": [],
+    "serviceInstances": [{
+      "metadata": { "name": "mysql" },
+      "spec": {
+        "clusterServiceClassExternalName": "cakephp-mysql-example",
+        "clusterServicePlanExternalName": "default"
+      }
+      }]
+  }
+}
+----
