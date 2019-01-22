@@ -29,4 +29,4 @@ oc get clusterserviceclasses -o custom-columns="displayName:.spec.externalMetada
 }
 ----
 
-. You can now navigate to {route-cakephp-mysql-example}
+. You can now navigate to {route-cakephp-mysql-example-host}
