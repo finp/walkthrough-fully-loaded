@@ -1,19 +1,7 @@
-= Fully Loaded Walkthrough
+= Cake PHP Walkthrough
 
-// This is a template meant to be used as a starting point for walkthrough development
+The walkthrough.json file creates a cake PHP app in OpenShift
 
-[time=5]
-== Adding a mysql instance using a walkthrough
-
-. Get log in from OpenShift Console
-. Log into OpenShift from a console
-. Run the following command to view the external service names of the catalog:
-+
-----
-oc get clusterserviceclasses -o custom-columns="displayName:.spec.externalMetadata.displayName, externalName:.spec.externalName"
-----
-. Add the service you require to `walkthrough.json`, for example:
-+
 ----
 {
   "dependencies": {
@@ -29,4 +17,8 @@ oc get clusterserviceclasses -o custom-columns="displayName:.spec.externalMetada
 }
 ----
 
-. You can now navigate to {route-cakephp-mysql-example-host}
+
+[time=5]
+== Log into the app
+
+. Navigate to {route-cakephp-mysql-example-host}
